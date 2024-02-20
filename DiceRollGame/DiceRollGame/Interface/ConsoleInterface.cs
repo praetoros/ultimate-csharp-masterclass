@@ -9,17 +9,12 @@ public static class ConsoleInterface
 
     public static int ReadNumber(string message = "")
     {
-        while (true)
+        int number;
+        while (!int.TryParse(Console.ReadLine(), out number))
         {
-            if (int.TryParse(Console.ReadLine(), out int number))
-            {
-                return number;
-            }
-            if (message != "")
-            {
-                Console.WriteLine(message);
-            }
+            Console.WriteLine(message);
         }
+        return number;
     }
 
     public static ConsoleKeyInfo ReadKey()
