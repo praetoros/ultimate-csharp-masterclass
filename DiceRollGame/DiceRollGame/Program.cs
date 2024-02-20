@@ -8,4 +8,3 @@ GameResult result = game.Play();
 GuessingGame.PrintResult(result);
 
 ConsoleInterface.ReadKey();
-q
